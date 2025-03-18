@@ -5,7 +5,6 @@ import { IoMdTime } from "react-icons/io";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { BiSolidCategory } from "react-icons/bi";
 import '../css/Post.css';
-import Comment from "../components/Comment";
 import RelatedPost from "../components/RelatedPost";
 
 
@@ -104,7 +103,6 @@ export default async function Post({ params }) {
               ></iframe>
             </div>
           )}
-          <Comment />
           <RelatedPost />
         </div>
 
