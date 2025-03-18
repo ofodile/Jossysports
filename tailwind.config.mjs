@@ -10,6 +10,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+       // customNav:  '#243127',
+     //   customNav:  '#11302a',
+        customNav:  '#004100',
+        customNav:  '#FFFFFF',
+        siteColor:  '#ff3d00',
+        customGray: '#2F4F4F',
       },
     },
   },

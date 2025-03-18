@@ -1,0 +1,129 @@
+.swiper-container {
+  position: relative;
+}
+
+
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 30px;
+  border-radius: 5px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  width: 80%;
+  z-index: 2;
+}
+
+@keyframes slideShow {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  40% { opacity: 1; }
+  60% { opacity: 0; }
+  100% { opacity: 0; }
+}
+.slide:nth-child(1) { animation: slideShow 12s infinite; } /* Adjust total duration */
+.slide:nth-child(2) { animation: slideShow 12s infinite 4s; } /* Delay for 4s */
+.slide:nth-child(3) { animation: slideShow 12s infinite 8s; } /* Delay for 8s */
+
+.swiper-container {
+  position: relative;
+}
+
+/* Custom Buttons */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-50%);
+  color: #ff3d00;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  z-index: 10;
+  padding: 5px;
+  padding-bottom: 5px;
+}
+
+.overlay-img{
+  height: 500px;
+  width: 100%;
+}
+
+/* Positioning */
+.custom-prev {
+  left: 30px;
+}
+
+.custom-next {
+  right: 30px;
+}
+
+/* Hover Effect */
+.custom-prev:hover,
+.custom-next:hover {
+  
+}
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  bottom: 0;  /* Darkness starts from the bottom */
+  left: 0;
+  width: 100%;
+  height: 80%; /* Adjust how much of the image is dark */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Dark to transparent */
+  z-index: 1;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .text-overlay{
+    bottom: 20%;
+    left: 50%;
+    font-size: 15px;
+  }
+  
+  .custom-prev{
+    left: 15px;
+    font-size: 20px;
+  }
+  .custom-next{
+   right: 15px;
+   font-size: 20px;
+  }
+  
+  .overlay-img{
+    height: 300px;
+  }
+  
+}
+
