@@ -1,8 +1,10 @@
 import client from '../contentfulClient';
 import Link from "next/link";
 import '../css/category.css';
+import Adbanner1 from '../components/Adbanner1';
+import Adbanner2 from '../components/Adbanner2';
 
-export default async function Home({ searchParams }) {
+export default async function TransfarNews({ searchParams }) {
   // Get current page from searchParams
   const params = await searchParams;
   const currentPage = parseInt(params?.page || '1', 10);
@@ -12,7 +14,7 @@ export default async function Home({ searchParams }) {
 
   const res = await client.getEntries({
     content_type: 'jossysports',
-    'fields.category': 'Highlight',
+    'fields.category': 'Transfar News',
     limit: itemsPerPage,
     skip,
   });
@@ -25,7 +27,13 @@ export default async function Home({ searchParams }) {
 
   return (
     <>
-      <h2 className="latest">Fanzone Section</h2>
+      <div className="ad1">
+        <Adbanner1 />
+      </div>
+      <div className="ad2">
+        <Adbanner2 />
+      </div>
+      <h2 className="latest">Transfar News</h2>
       <hr className="hr" />
 
       <div className="container">

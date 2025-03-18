@@ -35,6 +35,17 @@
   margin-right: auto;
 }
 
+.ad1{
+  margin-top: 20px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ad2{
+  display: none;
+}
+
 .search-hr{
   border: 2px solid #ff3d00;
   width: 80%;
@@ -125,5 +136,16 @@
   
   .tag{
     bottom: 80px;
+  }
+  
+  .ad1{
+   display: none;
+  }
+
+  .ad2{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: center;
   }
 }

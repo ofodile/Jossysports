@@ -99,12 +99,12 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="/Premier-league" className="block py-2 text-black px-3 text-gray-900 dark:text-black dark:font-bold font-bold">
+                <a href="/premier-league" className="block py-2 text-black px-3 text-gray-900 dark:text-black dark:font-bold font-bold">
                   Premier League
                 </a>
               </li>
               <li>
-                <a href="/La-Liga" className="block py-2 text-black px-3 text-gray-900 dark:text-black dark:font-bold font-bold">
+                <a href="/la-liga" className="block py-2 text-black px-3 text-gray-900 dark:text-black dark:font-bold font-bold">
                   La Liga
                 </a>
               </li>
@@ -114,8 +114,8 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="/fanzone" className="block py-2 text-black px-3 text-gray-900 dark:text-black font-bold">
-                  Fanzone
+                <a href="/transfar-news" className="block py-2 text-black px-3 text-gray-900 dark:text-black font-bold">
+                  Transfar News
                 </a>
               </li>
               <li>
