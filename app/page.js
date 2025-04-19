@@ -43,6 +43,7 @@ export default async function Home({ searchParams }) {
             </div>
           </Link>
         ))}
+        </div>
 
         {/* Pagination Controls */}
         <div className="pagination">
@@ -63,7 +64,6 @@ export default async function Home({ searchParams }) {
             </Link>
           )}
         </div>
-      </div>
     </>
   );
 }
