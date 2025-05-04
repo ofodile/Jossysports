@@ -8,7 +8,7 @@ export default async function RelatedPost() {
   
   const res = await client.getEntries({
     content_type: 'jossysports',
-    limit: 6,  
+    limit: 4,  
   }); 
 
   const data = res.items; 
