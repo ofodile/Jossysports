@@ -22,10 +22,36 @@ export async function generateMetadata({ params }) {
 
   const data = res.items[0]?.fields || {};
 
+  const imageUrl = data.thumbnail?.fields?.file?.url
+    ? `https:${data.thumbnail.fields.file.url}`
+    : null;
+
   return {
     title: data?.title,
     description: data?.description,
     keywords: data?.keyword,
+    openGraph: {
+      title: data?.title,
+      description: data?.description,
+      url: `https://www.jossysports.com.ng/${slug}`, // Replace with your real domain
+      type: 'article',
+      images: imageUrl
+        ? [
+            {
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              alt: data?.title || 'Post image',
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data?.title,
+      description: data?.description,
+      images: imageUrl ? [imageUrl] : [],
+    },
   };
 }
 
@@ -147,7 +173,7 @@ export default async function Post({ params }) {
 
         <div className='section-2'>
           <script async="async" data-cfasync="false" src="//stoolsymphony.com/8a133a2ee23fc0b56f53b0e04dfd9448/invoke.js"></script>
-           <div id="container-8a133a2ee23fc0b56f53b0e04dfd9448"></div>
+          <div id="container-8a133a2ee23fc0b56f53b0e04dfd9448"></div>
         </div>
       </div>
     </>

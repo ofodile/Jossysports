@@ -28,12 +28,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Place the script directly in the <head> using dangerouslySetInnerHTML */}
-        <script
-          async
-          src="https://js.onclckmn.com/static/onclicka.js"
-          data-admpid="320671"
-        ></script>
-        <script async src="https://js.onclckmn.com/static/onclicka.js" data-admpid="320671"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
